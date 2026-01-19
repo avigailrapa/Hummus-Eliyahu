@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="menu-icon" onclick="toggleMenu()">☰</div> 
+        <ul class="menu">
+            <li><a href="odot.html" class="li">אודות</a></li>
+            <li><a href="tafrit.html" class="li">תפריט</a></li>
+            <li><a href="orders.html" class="li">הזמנות</a></li>
+            <li><a href="snifim.html" class="li">סניפים</a></li>
+            <li><a href="chumus.html" class="li">דף הבית</a></li>
+        </ul>
+        <div id="logo">
+            <img src="images/logo.png" alt="logo">
+        </div>
+       </header>
+       <section>
+        <video autoplay muted loop controls id="video">
+                <source src="images/video.mp4" type="video/mp4">
+                <source src="images/video.mp4" type="video/ogg">
+               </video>
+               <div id="pic"><img src="images/17.PNG" alt="chumus"></div>
+              <div id="images">
+   <img src="images/image1.jpg" alt="chumus">
+   <img src="images/image2.jpg" alt="chumus">
+          </div>
+        </div>
+          <div class="table-container">
+            <table>
+                <tr>
+                    <th>הסבר קצר</th>
+                    <th>האמת</th>
+                    <th>מיתוס</th>                   
+                </tr>
+                <td>חומוס עשיר בחלבון ובסיבים תזונתיים, ואם צורכים אותו במידה, הוא תורם לבריאות</td>
+               <td>&#128078;&#127996;</td>
+                <td class="myth">חומוס משמין</td>
+            </tr>
+            <tr>
+                <td>אין קשר לזמן האכילה, אך עדיף להימנע מארוחה כבדה מדי לפני השינה</td>
+                <td>&#128078;&#127996;</td>
+                <td class="myth">אסור לאכול חומוס בלילה</td>
+            </tr>
+            <tr>
+                <td>ההשריה מקלה על הבישול ומשפרת את המרקם</td>
+                <td><span>&#128077;&#127996;</span></td>
+                <td class="myth">חייבים להשרות חומוס במשך לילה</td>
+            </tr>
+            <tr>
+                <td>אם שומרים במקרר ובכלי אטום, אפשר להאריך את חיי המדף שלו ל-3 ימים</td>
+                <td>&#128078;&#127996;</td>
+                <td class="myth">חומוס טרי נשמר רק יום אחד</td>
+            </tr>
+            <tr>
+                <td>חומוס הפך לפופולרי בכל העולם, ויש לו גרסאות שונות גם באירופה ובארה"ב</td>
+                <td>&#128078;&#127996;</td>
+                <td class="myth">חומוס הוא מאכל מזרח תיכוני בלבד</td>
+            </tr>
+          </table>
+</div>
+
+   </section>
+</div>
+<footer>
+    <div id="footer-content">
+            <ul>
+                <li>
+                    <a href="odot.html" class="li"><p>אודות</p></a>
+                </li>
+                <li>
+                    <a href="tafrit.html" class="li"><p>תפריט</p></a>
+                </li>
+                <li>
+                    <a href="orders.html" class="li"><p>הזמנות</p></a>
+                </li>
+                <li>
+                    <a href="snifim.html" class="li"><p>סניפים</p></a>
+                </li>
+                <li>
+                    <a href="chumus.html" class="li"><p>דף הבית</p></a>
+                </li>
+            </ul>
+        
+                <div id="contact-info">
+                    <h3>צור קשר</h3>
+                    <p>טלפון: 03-1234567</p>
+                    <p>אימייל: <a href="mailto:info@humus-eli-yahoo">info@humus-eli-yahoo</a></p>
+                    <p>כתובת: רחוב החומוס 123, תל אביב</p>
+                </div>
+              </div>
+             </footer>
+             <script>
+                function toggleMenu() {
+                  const menu = document.querySelector('.menu');
+                  menu.classList.toggle('active');
+                }
+                </script>
+                
+                
+</body>
+</html>

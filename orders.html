@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="menu-icon" onclick="toggleMenu()">☰</div> 
+        <ul class="menu">
+            <li><a href="odot.html" class="li">אודות</a></li>
+            <li><a href="tafrit.html" class="li">תפריט</a></li>
+            <li><a href="orders.html" class="li">הזמנות</a></li>
+            <li><a href="snifim.html" class="li">סניפים</a></li>
+            <li><a href="chumus.html" class="li">דף הבית</a></li>
+        </ul>
+        <div id="logo">
+            <img src="images/logo.png" alt="logo">
+        </div>
+       </header>
+      <section>
+        <form class="order-form" id="order-form" action="chumus.html">
+            <h2>טופס הזמנת חומוס</h2>
+          
+            <label for="name">שם מלא:</label>
+            <input type="text" id="name" name="name" required>
+          
+            <label for="phone">מספר טלפון:</label>
+            <input type="tel" id="phone" name="phone" required>
+          
+            <label for="dish">בחר מנה:</label>
+            <select id="dish" name="dish">
+             <option value="egg">חומוס עם ביצה</option>
+              <option value="mashawsha">חומוס משולב - גרגרים, טחינה ופול</option>
+              <option value="sabbich">חומוס סביח</option>
+              <option value="sabbich">חומוס פטריות</option>
+              <option value="sabbich">חומוס שקשוקה</option>
+              <option value="sabbich">פלאפל</option>
+              <option value="sabbich">ציפס</option>
+              <option value="classic">סלט ישראלי</option>
+              <option value="sabbich">סלט המלך </option>
+              <option value="sabbich">פיתה </option>
+              <option value="sabbich">גרגירי חומוס</option>
+              <option value="sabbich"> טחינה</option>
+            </select>
+          
+            <label for="delivery-method">בחר שיטת קבלה:</label>
+            <select id="delivery-method" name="delivery-method">
+              <option value="delivery">משלוח עד הבית</option>
+              <option value="pickup">איסוף עצמי</option>
+            </select>
+          
+            <div id="delivery-address" style="display: block;">
+              <label for="address">כתובת למשלוח:</label>
+              <input type="text" id="address" name="address" placeholder="רחוב, מספר בית, עיר">
+            </div>
+            
+            <div id="pickup-sifnim" style="display: none;">
+                <label for="snif">בחר סניף לאיסוף:</label>
+                <select id="snif" name="snif">
+                    <option value="beit-shean">חומוס אליהו בית שאן</option>
+                    <option value="beit-shita">חומוס אליהו בית השיטה</option>
+                    <option value="beer-sheva">חומוס אליהו באר שבע-מצדה</option>
+                    <option value="bat-yam">חומוס אליהו בת ים</option>
+                    <option value="bnei-brak">חומוס אליהו בני ברק</option>
+                    <option value="beit-shemesh">חומוס אליהו בית שמש</option>
+                    <option value="ali">חומוס אליהו עלי</option>
+                    <option value="tzemach">חומוס אליהו צמח טבריה</option>
+                    <option value="kadima">חומוס אליהו קדימה</option>
+                    <option value="kiryat-ata">חומוס אליהו קריית אתא</option>
+                </select>
+            </div>
+          
+            <label for="comments">הערות נוספות:</label>
+            <textarea id="comments" name="comments" rows="4" placeholder="למשל: תוספות מיוחדות"></textarea>
+          
+         <button type="submit">שלח הזמנה</button>
+        </form>
+    </section>
+    </div>
+    <div id="footer-content">
+        <div id="footer-nav">
+            <ul>
+                <li>
+                    <a href="odot.html" class="li"><p>אודות</p></a>
+                </li>
+                <li>
+                    <a href="tafrit.html" class="li"><p>תפריט</p></a>
+                </li>
+                <li>
+                    <a href="orders.html" class="li"><p>הזמנות</p></a>
+                </li>
+                <li>
+                    <a href="snifim.html" class="li"><p>סניפים</p></a>
+                </li>
+                <li>
+                    <a href="chumus.html" class="li"><p>דף הבית</p></a>
+                </li>
+            </ul>
+        </div>
+                <div id="contact-info">
+                    <h3>צור קשר</h3>
+                    <p>טלפון: 03-1234567</p>
+                    <p>אימייל: <a href="mailto:info@humus-eli-yahoo">info@humus-eli-yahoo</a></p>
+                    <p>כתובת: רחוב החומוס 123, תל אביב</p>
+                </div>
+              </div>
+          </footer>
+              <script>
+        document.getElementById('delivery-method').addEventListener('change', function() {
+            const addressField = document.getElementById('delivery-address');
+            const pickupSnifim = document.getElementById('pickup-sifnim');
+            if (this.value === 'delivery') {
+                addressField.style.display = 'block'; // הצגת שדה כתובת
+                pickupSnifim.style.display = 'none'; // הסתרת שדה סניפים
+            } else if (this.value === 'pickup') {
+                addressField.style.display = 'none'; // הסתרת שדה כתובת
+                pickupSnifim.style.display = 'block'; // הצגת שדה סניפים
+            }
+        });
+
+        // ודא שבתחילת הדף שדות מוצגים כראוי לפי ברירת המחדל
+        window.onload = function() {
+            const deliveryMethod = document.getElementById('delivery-method').value;
+            const addressField = document.getElementById('delivery-address');
+            const pickupSnifim = document.getElementById('pickup-sifnim');
+            if (deliveryMethod === 'delivery') {
+                addressField.style.display = 'block'; // הצגת שדה כתובת
+                pickupSnifim.style.display = 'none'; // הסתרת שדה סניפים
+            } else {
+                addressField.style.display = 'none'; // הסתרת שדה כתובת
+                pickupSnifim.style.display = 'block'; // הצגת שדה סניפים
+            }
+        };
+
+        // טיפול בהגשת הטופס
+        document.getElementById('order-form').addEventListener('submit', function(event) {
+            const deliveryMethod = document.getElementById('delivery-method').value;
+            const address = document.getElementById('address').value;
+            const snif = document.getElementById('snif').value;
+
+            // אם נבחר משלוח ועדיין לא הוזנה כתובת
+            if (deliveryMethod === 'delivery' && !address) {
+                alert('אנא מלא את כתובת המשלוח');
+                event.preventDefault(); // מונע שליחה עד שתתוקן השגיאה
+            }
+            // אם נבחר איסוף עצמי ועדיין לא נבחר סניף
+            else if (deliveryMethod === 'pickup' && !snif) {
+                alert('אנא בחר סניף לאיסוף');
+                event.preventDefault(); // מונע שליחה עד שתתוקן השגיאה
+            } else {
+                // הצגת הודעה לאחר שליחה מוצלחת
+                alert('תודה על הזמנתך:)');
+            }
+        });
+      
+                function toggleMenu() {
+                  const menu = document.querySelector('.menu');
+                  menu.classList.toggle('active');
+                }
+        
+                
+    </script>
+</body>
+</html>
